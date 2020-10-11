@@ -133,3 +133,30 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
+
+/* modal */
+
+.modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	/* 투명한 검정 */
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.dialog {
+	/* 창사이즈의 절반 */
+	width: 50vw;
+
+	padding: 2em;
+	border-radius: 1em;
+	background: white;
+}
