@@ -81,3 +81,40 @@
 	content: '⌘';
 	margin-right: 0.5em;
 }
+
+
+/* message */
+
+.user-item {
+	display: flex;
+	font-size: 30px;
+
+	/* rem: root element(html)의 폰트 사이즈의 ?배 */
+	/* em: 현재(user-item)의 폰트 사이즈의 ?배 */
+	margin-bottom: 1.5em;
+}
+
+.user-photo {
+	/* 자리가 없어도 아이콘의 크기는 줄어들지 않음 */
+	flex-shrink: 0;
+
+	/* width와 height 지정해주지 않으면 그림 나타나지 않음 */
+	width: 50px;
+	height: 50px;
+
+	/* 0.5em = .5em */
+	margin-right: 0.5em;
+
+	border: 2px solid #333;
+	border-radius: 50%;
+	background-color: gold;
+	background-repeat: no-repeat;
+	
+	/* 원 안에 이미지가 다 들어가도록 */
+	background-position: center;
+	background-size: cover;
+
+	/* 이미지의 얼굴만 보이게 */
+	/* background-position: top;
+	background-size: 150%; */
+}
