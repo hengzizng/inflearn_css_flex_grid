@@ -118,3 +118,18 @@
 	/* background-position: top;
 	background-size: 150%; */
 }
+
+
+
+/* friend list */
+
+.friend-item {
+	align-items: center;
+}
+
+.user-name {
+	/* 컨텐츠가 창보다 길때 말줄임표 처리하는 세가지 세트 */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
