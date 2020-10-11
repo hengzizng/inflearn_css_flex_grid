@@ -42,6 +42,7 @@
 }
 
 
+
 /* search */
 
 .search-form {
@@ -63,4 +64,20 @@
 	border-radius: 0.3em;
 	font-size: 1rem;
 	background: gold;
+}
+
+
+
+/* bullet list */
+
+.info-list-item {
+	display: flex;
+	margin: 0.5em 0;
+}
+
+/* 가상엘리먼트 사용 */
+.info-list-item:before {
+	/* icon 복사 주소 : copychar.cc */
+	content: '⌘';
+	margin-right: 0.5em;
 }
