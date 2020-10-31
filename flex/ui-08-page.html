@@ -18,6 +18,7 @@
 				<input type="search">
 				<input type="submit" value="찾기">
 			</form>
+			<!-- <div id="modal-switch">➽</div> -->
 		</header>
 
 		<!-- menu -->
@@ -36,6 +37,8 @@
 			</li>
 		</ul>
 
+		<!-- 1024px 이상일 때를 다루기 위해 아래와 같이 컨테이너로 감싸서 사용할 수도 있음 -->
+		<!-- <div class="content-container"> -->
 		<!-- primary-content -->
 		<section class="primary">
 			<ul class="card-list">
@@ -161,12 +164,48 @@
 				</li>
 			</ul>
 		</aside>
+		<!-- </div> -->
 
 		<!-- footer -->
 		<footer class="footer">
-
+			Lorem ipsum dolor sit amet.
 		</footer>
+	</div>
 
+<!-- 원래는 JavaScript로 사용
+
+	<label for="test-checkbox">
+		<span>체크박스 테스트</span>
+	</label>
+	<input type="checkbox" id="test-checkbox">
+	<p class="test">TEST</p>
+	<p class="test">TEST</p>
+	<p class="test">TEST</p>
+	<style>
+		.test {
+			color: dodgerblue;
+		}
+
+		/* 체크된 상태의 test-checkbox의 다음에 나오는 모든 test 형제 선택 */
+		/* #test-checkbox:checked ~ .test {
+			color: crimson;
+		} */
+
+		/* 체크된 상태의 test-checkbox의 바로 다음에 나오는 test 형제 하나만 선택 */
+		#test-checkbox:checked + .test {
+			color: crimson;
+		}
+	</style>
+ -->
+
+	<input type="checkbox" id="modal-switch">
+	<label for="modal-switch">
+		<span>modal 열고 닫기</span>
+	</label>
+	<div class="modal">
+		<div class="dialog">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quasi facere animi! Ipsam, minus! Vitae fugiat dolore, excepturi sunt ipsam cumque iusto quibusdam explicabo beatae et, quasi esse libero, corrupti accusantium praesentium quo est amet impedit commodi dicta. Quam et provident, quidem adipisci incidunt hic praesentium, voluptatum, vitae quod deleniti quis quasi doloremque! Tenetur qui quisquam necessitatibus cupiditate. Deserunt rem laudantium soluta?
+		</div>
 	</div>
 </body>
 </html>

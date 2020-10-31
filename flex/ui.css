@@ -87,7 +87,7 @@
 
 .user-item {
 	display: flex;
-	font-size: 30px;
+	/* font-size: 30px; */
 
 	/* rem: root element(html)의 폰트 사이즈의 ?배 */
 	/* em: 현재(user-item)의 폰트 사이즈의 ?배 */

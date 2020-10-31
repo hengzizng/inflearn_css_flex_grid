@@ -1,18 +1,23 @@
 .header {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	height: 80px;
 	padding: 0 1rem;
 }
 
 /* .header에 justify-content: space-between; 대신 사용 가능 */
-/* .search-form {
+.search-form {
 	margin-left: auto;
-} */
+
+	/* 모달 아이콘과 겹치지 않도록 */
+	margin-right: 3rem;
+}
 
 .search-form {
 	width: 300px;
+
+	/* 브라우저를 많이 줄였을때 1분코딩 로고를 침범하지 않도록 작성 */
 	max-width: 60%;
 }
 
@@ -27,6 +32,7 @@
 	padding: 1rem;
 }
 
+/* secondary-a, secondary-b 모두 */
 .secondary {
 	padding: 1rem;
 }
@@ -36,11 +42,115 @@
 }
 
 .secondary-b {
+	/* 글씨색 */
 	color: white;
+
+	/* 배경색 */
 	background: #666;
 }
 
 .footer {
 	padding: 1rem;
 	text-align: center;
+	border-top: 1px solid lightgray;
+}
+
+.modal {
+	display: none;
+	top: 80px;
+}
+
+/* form class="search-form" 아래에 위치한 코드 */
+/* #modal-switch {
+	font-size: 2rem;
+} */
+
+/* 아이콘 클릭 시 modal창 나타나도록 */
+/* modal-switch가 체크되면 modal 클래스 변경 */
+#modal-switch:checked ~ .modal {
+	display: flex;
+}
+/* 아이콘 위치 고정시키기 */
+label[for="modal-switch"] {
+	/* 일반적으로는 버튼이므로 inline-flex 사용 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	top: 1.3rem;
+	right: 1rem;
+	width: 40px;
+	height: 40px;
+}
+label[for="modal-switch"]:before {
+	content: "➽";
+	font-size: 2rem;
+}
+/* 아이콘 클릭 시 파란색으로 변경 */
+#modal-switch:checked ~ label[for="modal-switch"]:before {
+	color: dodgerblue;
+}
+/* 체크박스와 "modal 열고 닫기" 글자 숨김 */
+#modal-switch, label[for="modal-switch"] span {
+	/* 공간을 차지하지 않도록 */
+	position: absolute;
+
+	/* 숨김 처리(스크린리더,SEO등의 이유로 display: none; 이나 width: 0; 사용 피함) */
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+
+	/* 투명도 없앰 */
+	opacity: 0;
+
+	/* 모달 출력 위치 위쪽으로 고정 */
+	top: 0;
+}
+
+
+/* 창의 넓이가 넓어지면 sidebar 보이도록 */
+@media (min-width: 1024px) {
+	.page {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.header {
+		width: 100%;
+	}
+	.menu {
+		width: 100%;
+	}
+	.secondary {
+		width: 20%;
+	}
+	.secondary-a {
+		order: 1;
+	}
+	.secondary-b {
+		order: 3;
+	}
+	.primary {
+		order: 2;
+		width: 60%;
+	}
+	.footer {
+		order: 4;
+		width: 100%;
+	}
+}
+
+/* 일정 크기 이상 되면 사이드바 너비 고정 */
+@media (min-width: 1400px) {
+	.primary {
+		/* 100%에서 600px 뺀만큼 (calc 쓸때 띄어쓰기 꼭 하기) */
+		/* 아래 세 줄로도 사용 가능 */
+		width: calc(100% - 600px);
+		/* flex-grow: 1; */
+		/* flex: 1 1 auto; */
+		/* flex: auto; */
+	}
+	.secondary {
+		width: 300px;
+	}
 }
